@@ -1,15 +1,27 @@
 //*********************************************************
-//README
+## README
 //*********************************************************
-//first install vue js globally using command line
+### first install vue js globally using command line
+```
 $ npm install -g vue-cli
-//or using the new npm version 3
+```
+### or using the new npm version 3
+```
 $ npm install -g @vue/cli
-//Initialize the project
+```
+### Initialize the project
+```
 $ vue init vuetifyjs/webpack my-project
-//change to project directory
+```
+### change to project directory
+```
 $ cd my-project
-//Install dependencies such as axios,stylus,stylus-loder,multer
+```
+### Install dependencies such as axios,stylus,stylus-loder,multer
+```
 $ npm install
-//start the server
+```
+### start the server
+```
 $ npm run dev# blog-app
+```
