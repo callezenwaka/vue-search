@@ -1,6 +1,7 @@
-//*********************************************************
-## README
-//*********************************************************
+# README
+
+## A blog application
+
 ### first install vue js globally using command line
 ```
 $ npm install -g vue-cli
