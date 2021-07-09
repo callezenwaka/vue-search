@@ -1,28 +1,34 @@
-# README
+# vue-search
 
-## A blog application
+## Project setup
+```
+npm install
+```
 
-### first install vue js globally using command line
+### Compiles and hot-reloads for development
 ```
-$ npm install -g vue-cli
+npm run serve
 ```
-### or using the new npm version 3
+
+### Compiles and minifies for production
 ```
-$ npm install -g @vue/cli
+npm run build
 ```
-### Initialize the project
+
+### Run your tests
 ```
-$ vue init vuetifyjs/webpack my-project
+npm run test
 ```
-### change to project directory
+
+### Lints and fixes files
 ```
-$ cd my-project
+npm run lint
 ```
-### Install dependencies such as axios,stylus,stylus-loder,multer
+
+### Run your unit tests
 ```
-$ npm install
+npm run test:unit
 ```
-### start the server
-```
-$ npm run dev# blog-app
-```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
