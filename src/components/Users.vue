@@ -84,7 +84,11 @@ export default {
       return true;
     },
     searchName() {
-      if (!this.validate()) return;
+      if (!this.validate())
+        return this.setMessage({
+          text: `Enter username to search`,
+          status: false,
+        });
       this.getUsers({ keyword: this.keyword });
     },
   },
