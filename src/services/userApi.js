@@ -52,7 +52,7 @@ export default {
     });
   },
   
-  async getUsers(username) {
+  async getUsers(keyword) {
     let db = await this.getDb();
     
     return new Promise(resolve => {
@@ -65,10 +65,13 @@ export default {
       let store = trans.objectStore('users');
       let users = [];
       
-      store.openCursor().onsuccess = e => {
-        let cursor = e.target.result;
-        if (cursor && cursor.value.name.toLowerCase().includes(username.toLowerCase())) {
-          users.push(cursor.value)
+      store.openCursor()
+        .onsuccess = e => {
+          let cursor = e.target.result;
+          if (cursor) {
+            if (cursor.value.name.toLowerCase().includes(keyword.toLowerCase())) {
+              users.push(cursor.value)
+            }
           cursor.continue();
         }
       };

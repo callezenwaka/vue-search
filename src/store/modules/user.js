@@ -31,9 +31,9 @@ const actions = {
   async getUsers(context, payload) {
     try {
       // api call
-      const data= await userApi.getUsers(payload.keyword);
+      const data = await userApi.getUsers(payload.keyword);
       await context.commit('GET_USERS', data );
-      await context.dispatch('setMessage', {text: 'Users fetch successful!', status: true});
+      await context.dispatch('setMessage', {text: data.length? 'Users fetch successful!' : 'No match found!', status: true});
       return data;
     } catch (err) {
       await context.dispatch('setMessage', {text: err.message || `Users fetch failed!`, status: false});
